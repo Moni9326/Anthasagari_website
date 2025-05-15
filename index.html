@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antahsagari | ROV Project - IIT Guwahati</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Antahsagari</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#aim">Aim</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#recruitment">Recruitment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Antahsagari</h1>
+        <p>Remotely Operated Underwater Vehicle | IIT Guwahati</p>
+        <a href="#demo" class="btn">Watch Demo</a>
+      </div>
+    </div>
+    <video autoplay muted loop id="bg-video">
+      <source src="pictures/Antah 3.0.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="about" data-aos="fade-right">
+    <h2>About Antahsagari</h2>
+    <p>Antahsagari is a student-driven underwater ROV initiative under 4i-Labs, IIT Guwahati. It addresses underwater exploration challenges through engineering innovation.</p>
+  </section>
+
+  <section id="aim" data-aos="fade-left">
+    <h2>Project Aim</h2>
+    <ul>
+      <li>Explore Brahmaputra's bed and ecosystem.</li>
+      <li>Inspect dams, pipelines and underwater structures.</li>
+      <li>Monitor water quality and species distribution.</li>
+    </ul>
+  </section>
+
+  <section id="features" data-aos="zoom-in">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="card">5 Thrusters</div>
+      <div class="card">Raspberry Pi + Pixhawk</div>
+      <div class="card">Leak & Pressure Sensors</div>
+      <div class="card">Subsea Lights & Camera Tilt</div>
+    </div>
+  </section>
+
+  <section id="demo" data-aos="fade-up">
+    <h2>Demonstration Video</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="pictures/Antah 3.0.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section id="team" data-aos="fade-right">
+    <h2>Meet the Team</h2>
+    <p>We are a multidisciplinary group of engineers from IIT Guwahati, passionate about robotics, marine systems, and innovation.</p>
+  </section>
+
+  <section id="recruitment" data-aos="fade-left">
+    <h2>Recruitment</h2>
+    <p>Interested in joining? We're always looking for new talent passionate about ROVs. Recruitment happens every semester!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Antahsagari | Designed by 4i-Labs, IIT Guwahati</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
