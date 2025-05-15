@@ -134,7 +134,7 @@ footer {
   padding: 2rem;
   background-color: #000818;
 }
-/* TEAM SECTION */
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -176,4 +176,20 @@ footer {
   font-size: 0.9rem;
   color: #cccccc;
 }
+.design-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
 
+.design-text {
+  flex: 1 1 300px;
+}
+
+.design-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
