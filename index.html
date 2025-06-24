@@ -1,127 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antahsagari | ROV Project - IIT Guwahati</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>  
-    <nav class="navbar">
-      <div class="logo">Antahsagari</div>
-      <ul class="nav-links">
-        <li><a href="technical.html">Technical Details</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#aim">Aim</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#recruitment">Recruitment</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">Antahsagari</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#aim">Aim</a></li>
+          <li><a href="#design">Design</a></li>
+          <li><a href="#demo">Demo</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#game-section">Game</a></li>
+        </ul>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay">
-      <div class="hero-content" data-aos="fade-up">
-        <h1>Antahsagari</h1>
-        <p>Remotely Operated Underwater Vehicle | IIT Guwahati</p>
-        <a href="#demo" class="btn">Watch Demo</a>
+    <video autoplay muted loop id="bg-video">
+      <source src="pictures/Antah 3.0.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-content">
+      <h1>Antahsagari</h1>
+      <p>Remotely Operated Underwater Vehicle | IIT Guwahati</p>
+      <a href="#game-section" class="btn">Try ROV Simulator</a>
+    </div>
+  </section>
+
+  <!-- Game Section -->
+  <section id="game-section">
+    <div class="game-container">
+      <h2 class="game-title">ROV Exploration Simulator</h2>
+      <p>Navigate the Antahsagari ROV to collect underwater samples while avoiding obstacles</p>
+      <canvas id="game-canvas" width="700" height="400"></canvas>
+      <div class="game-controls">
+        <button id="start-btn" class="btn">Start Game</button>
+        <button id="reset-btn" class="btn">Reset</button>
+      </div>
+      <div class="game-instructions">
+        <p>Use Arrow Keys to navigate | Collect green samples | Avoid red obstacles</p>
+        <p>Score: <span id="score">0</span> | Time: <span id="time">60</span>s</p>
       </div>
     </div>
-    <video autoplay muted loop id="bg-video">
-      <source src="Antah 3.0.mp4" type="video/mp4">
-    </video>
   </section>
 
-  <section id="about" data-aos="fade-right">
-  <h2>About Antahsagari</h2>
-  <p>Antahsagari traces its origin to June 2019 when a group of students from varied engineering streams came together to deploy their skills. The team developed its first vehicle, Antahsagari 1.0, in November 2019, overcoming hurdles like cost, manufacturability, efficient design, and limited time.</p>
-  <p>The Remotely Operated Underwater Vehicle Antahsagari project is made under 4i-Labs, IIT Guwahati. The aim of the project is to explore the underwater world. The underwater nature imposes a number of challenges for navigation like depth pressure, water leakage, stability-related issues, poor underwater lighting, etc. Our team is determined to develop cutting-edge technology to overcome these challenges. We aim to make it more versatile and adaptive to make marine research and analysis effortless and prolific in the future.</p>
-</section>
-
-
-  <section id="aim" data-aos="fade-left">
-    <h2>Project Aim</h2>
-    <ul>
-      <li>Explore Brahmaputra's bed and ecosystem.</li>
-      <li>Inspect dams, pipelines and underwater structures.</li>
-      <li>Monitor water quality and species distribution.</li>
-    </ul>
-  </section>
-
-  <section id="design" data-aos="fade-left">
-  <h2>Design</h2>
-  <hr />
-  <div class="design-content">
-    <div class="design-text">
-      <p>
-        The model of the Antahsagari 3.0 is made such that it can withstand harsh and extreme underwater conditions while still being on a budget. The bot is designed to be as streamlined as possible, there are no big flat surfaces in the way of motion which may increase the resistance in motion. The main model is built of thick acrylic material to make sure that the electronics can survive high underwater pressure without any issues while at the same time giving the body strength and rigidity.
-      </p>
-    </div>
-    <div class="design-image">
-      <img src="Antah 1.png" alt="Antahsagari Design" />
-    </div>
-  </div>
-</section>
-
-
-  <section id="demo" data-aos="fade-up">
-    <h2>Demonstration Video</h2>
-    <div class="video-container">
-      <video controls>
-        <source src="Antah 3.0.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Antahsagari</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Antahsagari traces its origin to June 2019 when a group of students from varied engineering streams came together to deploy their skills. The team developed its first vehicle, Antahsagari 1.0, in November 2019, overcoming hurdles like cost, manufacturability, efficient design, and limited time.</p>
+          <p>The Remotely Operated Underwater Vehicle Antahsagari project is made under 4i-Labs, IIT Guwahati. The aim of the project is to explore the underwater world. The underwater nature imposes a number of challenges for navigation like depth pressure, water leakage, stability-related issues, poor underwater lighting, etc.</p>
+          <p>Our team is determined to develop cutting-edge technology to overcome these challenges. We aim to make it more versatile and adaptive to make marine research and analysis effortless and prolific in the future.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="team" data-aos="fade-right">
-  <h2>Meet the Team</h2>
-  <div class="team-grid">
-    <div class="team-card">
-      <img src="IMG-20250514-WA0113.jpg" alt="Project Lead">
-      <h3>Project Lead</h3>
+  <!-- Aim Section -->
+  <section id="aim" class="section">
+    <div class="container">
+      <h2 class="section-title">Project Aim</h2>
+      <div class="aim-section">
+        <ul>
+          <li>Explore Brahmaputra's bed and ecosystem</li>
+          <li>Inspect dams, pipelines and underwater structures</li>
+          <li>Monitor water quality and species distribution</li>
+        </ul>
+      </div>
     </div>
-    <div class="team-card">
-      <img src="pictures/team/ml-head.jpg" alt="ML Head">
-      <h3>ML Head</h3>
-    </div>
-    <div class="team-card">
-      <img src="Chanikya.jpeg" alt="Competitions Head">
-      <h3>Competitions Head</h3>
-    </div>
-    <div class="team-card">
-      <img src="pictures/team/design-head.jpg" alt="Design Head">
-      <h3>Design Head</h3>
-    </div>
-    <div class="team-card">
-      <img src="pictures/team/electronics-head.jpg" alt="Electronics Head">
-      <h3>Electronics Head</h3>
-    </div>
-    <div class="team-card">
-      <img src="pictures/team/core-member.jpg" alt="Core Member">
-      <h3>ML co head</head></h3>
-    </div>
-  </div>
-</section>
-
-  <section id="recruitment" data-aos="fade-left">
-    <h2>Recruitment</h2>
-    <p>Interested in joining? We're always looking for new talent passionate about ROVs. Recruitment happens every semester!</p>
   </section>
 
+  <!-- Design Section -->
+  <section id="design" class="section">
+    <div class="container">
+      <h2 class="section-title">Design</h2>
+      <div class="design-content">
+        <div class="design-text">
+          <p>
+            The model of the Antahsagari 3.0 is made such that it can withstand harsh and extreme underwater conditions while still being on a budget. The bot is designed to be as streamlined as possible, there are no big flat surfaces in the way of motion which may increase the resistance in motion. The main model is built of thick acrylic material to make sure that the electronics can survive high underwater pressure without any issues while at the same time giving the body strength and rigidity.
+          </p>
+        </div>
+        <div class="design-image">
+          <img src="pictures/Antah 1.png" alt="Antahsagari Design">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="section">
+    <div class="container">
+      <h2 class="section-title">Demonstration Video</h2>
+      <div class="video-container">
+        <video controls poster="https://images.unsplash.com/photo-1560275619-4662e36fa65c?q=80&w=2070&auto=format&fit=crop">
+          <source src="pictures/Antah 3.0.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section">
+    <div class="container">
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="pictures//Samiksha.jpeg" alt="Competitions Head">
+          <h3>Samiksha</h3>
+          <p>Overall Coordinator</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/IMG-20250514-WA0113.jpg" alt="Project Lead">
+          <h3>Moni Praneeth</h3>
+          <p>Project Lead</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/Kamesh.jpeg" alt="ML Head">
+          <h3>Kameshwar</h3>
+          <p>ML Head</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/Chanikya.jpeg" alt="Competitions Head">
+          <h3>Chanikya</h3>
+          <p>Competitions Head</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/Srinidhi.jpeg" alt="Design Head">
+          <h3>Srinidhi</h3>
+          <p>Design Head</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/Ajay.jpeg" alt="Electronics Head">
+          <h3>Ajay</h3>
+          <p>Electronics & Control Head</p>
+        </div>
+        <div class="team-card">
+          <img src="pictures/snehitha.jpeg" alt="Core Member">
+          <h3>Snehitha</h3>
+          <p>ML Core Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Antahsagari | Designed by 4i-Labs, IIT Guwahati</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">Antahsagari</div>
+          <p>Remotely Operated Underwater Vehicle Project</p>
+          <p>4i-Labs, IIT Guwahati</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/4ilabiitg?utm_source=ig_web_button_share_sheet&igsh=MWRpMWt0N2tnankyaA=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/4ilabiitg/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#aim">Project Aim</a></li>
+              <li><a href="#design">Design</a></li>
+              <li><a href="#team">Team</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Technical Details</a></li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Sponsors</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Antahsagari | Designed by 4i-Labs, IIT Guwahati</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
